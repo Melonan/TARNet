@@ -43,7 +43,8 @@ class Permute(torch.nn.Module):
         return x.permute(1, 0)
     
     
-
+# input_size 时间序列数据的维数
+# seq_len 时间序列数据的时间步长度
 class MultitaskTransformerModel(nn.Module):
 
     def __init__(self, task_type, device, nclasses, seq_len, batch, input_size, emb_size, nhead, nhid, nhid_tar, nhid_task, nlayers, dropout = 0.1):
